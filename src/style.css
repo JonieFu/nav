@@ -36,6 +36,7 @@ form {
   border-bottom-left-radius: 5px;
   box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
   border: 1px solid #ffffff;
+  outline: none;
 }
 .globalHeader button {
   width: 50px;
