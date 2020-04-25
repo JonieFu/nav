@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+    />
+    <title>前端导航</title>
+    <link rel="stylesheet" href="style.css" />
+    <style type="text/css">
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="globalHeader">
+      <form action="//baidu.com/s" method="GET">
+        <!-- <input type="text" name="wd" style="border-style: none;" /> -->
+        <input autocomplete="off" type="text" aria-hidden="true" />
+        <button type="submit"><img class="img" src="img/search.png" /></button>
+      </form>
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        <!-- <li class="site">
+          <div class="del">
+            <img class="picDel" src="img/delet.png" alt="" />
+          </div>
+          <a href="//bilibili.com" target="_self">
+            <div class="box">
+              <div class="logo">B</div>
+              <div class="link">bilibili.com</div>
+            </div>
+          </a>
+        </li> -->
+        <li class="site">
+          <div class="last">
+            <svg class="icon">
+              <use xlink:href="#icon-tianjia"></use>
+            </svg>
+          </div>
+          <div class="link">新增网址</div>
+        </li>
+      </ul>
+    </main>
+    <script src="//at.alicdn.com/t/font_1774205_p8fionxr71.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
