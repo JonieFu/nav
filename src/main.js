@@ -56,7 +56,10 @@ $last.on("click", function () {
   if (link) {
     if (link.indexOf("http") === 0 || link.indexOf("//") === 0) {
       url = link;
-      link = link.replace("https://", "").replace(/\/.*/, "");
+      link = link
+        .replace("https://", "")
+        .replace("http://", "")
+        .replace(/\/.*/, "");
     } else {
       url = "//" + link;
     }
