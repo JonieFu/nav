@@ -34,7 +34,6 @@ form {
   padding: 5px 10px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  /* border: none; */
   border: 1px solid white;
 }
 .globalHeader button {
@@ -43,7 +42,6 @@ form {
   background-color: white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  margin-left: -0.2px;
   border: 1px solid white;
   cursor: pointer;
 }
@@ -68,7 +66,8 @@ form {
   display: flex;
   /* justify-content: flex-start; */
   flex-wrap: wrap;
-  margin-right: -36px;
+  margin-right: -18px;
+  margin-left: -18px;
 }
 
 .siteList .site {
