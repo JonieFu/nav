@@ -30,21 +30,20 @@ form {
   box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
 }
 .globalHeader input {
+  /* ios系统input会有内边框，加上 -webkit-appearance属性，并且值为none*/
   -webkit-appearance: none;
   width: 100%;
   padding: 5px 10px;
-  /* box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1); */
   border: none;
+  /* input光标点击时不出现高光 */
   outline: none;
 }
 .globalHeader button {
   width: 50px;
   padding: 5px;
-  /* background-color: white; */
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: none;
-  /* box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1); */
   cursor: pointer;
 }
 
