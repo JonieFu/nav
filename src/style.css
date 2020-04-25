@@ -27,13 +27,13 @@ form {
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
-  /* box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1); */
+  box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
 }
 .globalHeader input {
   -webkit-appearance: none;
   width: 100%;
   padding: 5px 10px;
-  box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
+  /* box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1); */
   border: none;
   outline: none;
 }
@@ -41,11 +41,10 @@ form {
   width: 50px;
   padding: 5px;
   /* background-color: white; */
-  /* border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; */
-  margin-left: -1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border: none;
-  box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
+  /* box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1); */
   cursor: pointer;
 }
 
