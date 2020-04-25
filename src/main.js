@@ -1,4 +1,4 @@
-let $add = $(".last");
+// let $add = $(".site:last");
 let $last = $(".site:last");
 // 获取数据函数
 const getData = function () {
@@ -51,7 +51,7 @@ const render = function () {
 //   第二步渲染之前的数据
 render();
 // 添加点击事件应该先获取并渲染之前的数据;
-$add.on("click", function () {
+$last.on("click", function () {
   let link = window.prompt("添加我的导航：");
   if (link) {
     if (link.indexOf("http") === 0 || link.indexOf("//") === 0) {
