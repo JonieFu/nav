@@ -11,14 +11,14 @@ const saveData = function (hashMap) {
 //   第一步获取数据
 let data = getData();
 console.log(data);
-
+let timeOutEvent = 0;
 let hashMap;
 hashMap = data || [
   { logo: "b", link: "baidu.com", url: "//baidu.com" },
   {
-    logo: "y",
-    link: "yuque.com",
-    url: "//yuque.com",
+    logo: "g",
+    link: "github.com",
+    url: "//github.com",
   },
 ];
 
@@ -44,7 +44,9 @@ const render = function () {
       saveData(hashMap);
       console.log(hashMap);
       render();
-      // $last.siblings(".site").remove();
+    });
+    $(".site").on("touchstart", function (e) {
+      timeOutEvent = setTimeout("longPress()", 200);
     });
   });
 };
@@ -70,7 +72,6 @@ $last.on("click", function () {
     });
     // 保存数据
     saveData(hashMap);
-
     render();
   }
 });
@@ -83,3 +84,11 @@ $("html").on("keypress", function (e) {
     }
   });
 });
+$("html").on("click", function () {
+  clearTimeout(timeOutEvent);
+  $(".del").css("display", "none");
+});
+function longPress() {
+  timeOutEvent = 0;
+  $(".del").css("display", "block");
+}

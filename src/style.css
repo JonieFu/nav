@@ -93,11 +93,9 @@ form {
   top: 2px;
   width: 18px;
   cursor: pointer;
-  /* background-image: url(""); */
 }
 .siteList .picDel {
   width: 100%;
-  background-image: url("src/img/delet.png");
 }
 .siteList .box {
   width: 100%;
@@ -110,8 +108,8 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   font-size: 64px;
   color: #3a3e41;
   border-radius: 50%;
@@ -146,6 +144,12 @@ form {
   width: 70px;
   height: 70px;
 }
+.siteList .del {
+  display: none;
+}
+.siteList .site:hover .del {
+  display: block;
+}
 @media only screen and (min-width: 768px) {
   .globalHeader {
     width: 632px;
@@ -163,6 +167,12 @@ form {
     border-radius: 10px;
     margin-right: 13px;
     margin-left: 13px;
+  }
+  .siteList .del {
+    display: none;
+  }
+  .siteList .site:hover .del {
+    display: block;
   }
   .siteList .del {
     display: none;
