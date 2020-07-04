@@ -40,14 +40,13 @@ const render = function () {
         </li>`);
     // 添加节点
     $last.before($li);
-    // $("a").on("touchstart", function (e) {
-    //   console.log("11111111111111111111");
-    //   timeOutEvent = setTimeout(function () {
-    //     console.log("yeah");
-    //     $(".del").css("visibility", "visible");
-    //   }, 1000);
-    //   e.preventDefault();
-    // });
+    $("a").on("touchstart", function (e) {
+      timeOutEvent = setTimeout(function () {
+        console.log("yeah");
+        $(".del").css("display", "none");
+      }, 1000);
+      e.preventDefault();
+    });
     $(".site").on("click", ".del", function () {
       hashMap.splice(index, 1);
       saveData(hashMap);
@@ -107,9 +106,3 @@ $("html").on("keypress", function (e) {
 //   // }, 1000);
 //   // e.preventDefault();
 // });
-$(".test").on("tap", function (e) {
-  console.log(e);
-  console.log("!!!");
-
-  // $(this).hide();
-});
