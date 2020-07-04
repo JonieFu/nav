@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 body {
+  border: 0.5px solid white;
   height: 100vh;
 }
 ul,
@@ -28,9 +29,14 @@ a {
 /* 搜索栏 */
 .globalHeader {
   width: 80vw;
-  margin-top: 25vh;
+  margin-top: 20vh;
   margin-left: auto;
   margin-right: auto;
+}
+.globalHeader .logo {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: calc(50% - 62px);
 }
 form {
   display: flex;
@@ -159,10 +165,15 @@ form {
 /*.siteList .site:hover .del {
   display: block;
 } */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .globalHeader {
     width: 632px;
-    margin-top: 30vh;
+    margin-top: 20vh;
+  }
+  .globalHeader .logo {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 62px);
   }
   .globalMain {
     width: 632px;

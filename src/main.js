@@ -12,11 +12,16 @@ const saveData = function (hashMap) {
 let data = getData();
 let hashMap;
 hashMap = data || [
-  { logo: "b", link: "baidu.com", url: "//baidu.com" },
+  { logo: "b", link: "bilibili.com", url: "//bilibili.com" },
   {
-    logo: "y",
-    link: "yuque.com",
-    url: "//yuque.com",
+    logo: "g",
+    link: "github.com",
+    url: "//github.com",
+  },
+  {
+    logo: "z",
+    link: "zhihu.com",
+    url: "//zhihu.com",
   },
 ];
 let timer;
