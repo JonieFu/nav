@@ -7,6 +7,7 @@
 *::before {
   box-sizing: border-box;
 }
+
 ul,
 ol {
   list-style: none;
@@ -14,6 +15,10 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+  touch-callout: none;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -moz-touch-callout: none;
 }
 
 /* 搜索栏 */
@@ -147,9 +152,9 @@ form {
 .siteList .del {
   display: none;
 }
-.siteList .site:hover .del {
+/*.siteList .site:hover .del {
   display: block;
-}
+} */
 @media only screen and (min-width: 768px) {
   .globalHeader {
     width: 632px;
@@ -167,12 +172,6 @@ form {
     border-radius: 10px;
     margin-right: 13px;
     margin-left: 13px;
-  }
-  .siteList .del {
-    display: none;
-  }
-  .siteList .site:hover .del {
-    display: block;
   }
   .siteList .del {
     display: none;

@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 搜索栏 */
+.globalHeader {
+  width: 80vw;
+  margin-top: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(184, 184, 184, 1);
+}
+.globalHeader input {
+  /* ios系统input会有内边框，加上 -webkit-appearance属性，并且值为none*/
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  /* input光标点击时不出现高光 */
+  outline: none;
+}
+.globalHeader button {
+  width: 50px;
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.globalHeader .img {
+  width: 100%;
+}
+/* 主体 */
+.globalMain {
+  /* border: 1px solid red; */
+  width: 300px;
+  /* 300= 132*2+36=264+36 但如果两个块儿都有36的右边距放不到一行 单独设定太麻烦 */
+  /* 爷爷元素正常的block */
+  margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ul列表 */
+.siteList {
+  /* 爸爸元素flex wrap 负数margin */
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-wrap: wrap;
+  margin-right: -18px;
+  margin-left: -18px;
+}
+
+.siteList .site {
+  position: relative;
+  width: 132px;
+  height: 100px;
+  margin-bottom: 36px;
+  border-radius: 10px;
+  font-family: Roboto;
+  margin-right: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteList .site:hover {
+  background: #f2f2f2;
+}
+
+.siteList .del {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 18px;
+  cursor: pointer;
+}
+.siteList .picDel {
+  width: 100%;
+}
+.siteList .box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.siteList .site .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  font-size: 64px;
+  color: #3a3e41;
+  border-radius: 50%;
+  background-color: #f1f3f4;
+  text-transform: uppercase;
+}
+
+.siteList .link {
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 15px;
+  color: #3a3e41;
+  /* 使文本不可换行 */
+  white-space: nowrap;
+  /* 隐藏溢出部分 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.siteList .site:last-child {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.last {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteList .last .icon {
+  width: 70px;
+  height: 70px;
+}
+.siteList .del {
+  /* display: none; */
+  visibility: hidden;
+}
+/*.siteList .site:hover .del {
+  display: block;
+} */
+@media only screen and (min-width: 768px) {
+  .globalHeader {
+    width: 632px;
+    margin-top: 30vh;
+  }
+  .globalMain {
+    width: 632px;
+    margin-top: 26px;
+  }
+  .siteList {
+    margin-right: -26px;
+  }
+  .siteList .site {
+    margin-bottom: 26px;
+    border-radius: 10px;
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+  .siteList .del {
+    display: none;
+  }
+  .siteList .site:hover .del {
+    display: block;
+  }
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

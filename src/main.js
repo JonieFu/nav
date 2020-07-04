@@ -10,25 +10,26 @@ const saveData = function (hashMap) {
 };
 //   第一步获取数据
 let data = getData();
-console.log(data);
-let timeOutEvent = 0;
 let hashMap;
 hashMap = data || [
   { logo: "b", link: "baidu.com", url: "//baidu.com" },
   {
-    logo: "g",
-    link: "github.com",
-    url: "//github.com",
+    logo: "y",
+    link: "yuque.com",
+    url: "//yuque.com",
   },
 ];
-
+let timeOutEvent;
+window.document.oncontextmenu = function (e) {
+  e.preventDefault();
+};
 // 渲染数据函数;
 const render = function () {
   $last.siblings(".site").remove();
   hashMap.forEach((n, index) => {
     const $li = $(`<li class="site" >
           <div class="del" id = ${index}>
-            <img class="picDel" src="img/delet.png" />
+            <img class="picDel" src="./img/delete.png" />
           </div>
           <a href="${n.url}" target="_self">
             <div class="box">
@@ -39,14 +40,18 @@ const render = function () {
         </li>`);
     // 添加节点
     $last.before($li);
+    // $("a").on("touchstart", function (e) {
+    //   console.log("11111111111111111111");
+    //   timeOutEvent = setTimeout(function () {
+    //     console.log("yeah");
+    //     $(".del").css("visibility", "visible");
+    //   }, 1000);
+    //   e.preventDefault();
+    // });
     $(".site").on("click", ".del", function () {
       hashMap.splice(index, 1);
       saveData(hashMap);
-      console.log(hashMap);
       render();
-    });
-    $(".site").on("touchstart", function (e) {
-      timeOutEvent = setTimeout("longPress()", 200);
     });
   });
 };
@@ -84,11 +89,27 @@ $("html").on("keypress", function (e) {
     }
   });
 });
-$("html").on("click", function () {
-  clearTimeout(timeOutEvent);
-  $(".del").css("display", "none");
+// function longPress() {
+//   timeOutEvent = 0;
+//   console.log("yeah");
+//   $(".del").css("visibility", "visible");
+// }
+
+// $(".site").on("touchstart", function (e) {
+//   console.log(e.target);
+
+//   // if (e.target === "") {
+//   // }
+//   // console.log("11111111111111111111");
+//   // timeOutEvent = setTimeout(function () {
+//   //   console.log("yeah");
+//   //   $(".del").css("visibility", "visible");
+//   // }, 1000);
+//   // e.preventDefault();
+// });
+$(".test").on("tap", function (e) {
+  console.log(e);
+  console.log("!!!");
+
+  // $(this).hide();
 });
-function longPress() {
-  timeOutEvent = 0;
-  $(".del").css("display", "block");
-}
