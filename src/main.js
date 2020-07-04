@@ -19,7 +19,7 @@ hashMap = data || [
     url: "//yuque.com",
   },
 ];
-let timeOutEvent;
+let timer;
 window.document.oncontextmenu = function (e) {
   e.preventDefault();
 };
@@ -41,14 +41,13 @@ const render = function () {
     // 添加节点
     $last.before($li);
     $("a").on("touchstart", function (e) {
-      startTime = +new Date();
       timer = setTimeout(function () {
         $(".del").css("display", "block");
       }, 700);
     });
     $("a").on("touchend", function (e) {
-      endTime = +new Date();
       clearTimeout(timer);
+      e.stopPropagation();
     });
     $(".site").on("click", ".del", function () {
       hashMap.splice(index, 1);
@@ -82,6 +81,6 @@ $last.on("click", function () {
     render();
   }
 });
-$("html").on("click", function () {
+$("html").on("touchend", function () {
   render();
 });
