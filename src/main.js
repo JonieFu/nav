@@ -49,7 +49,8 @@ const render = function () {
       clearTimeout(timer);
       e.stopPropagation();
     });
-    $(".site").on("click", ".del", function () {
+    $(".del").on("click", function (e) {
+      e.preventDefault();
       hashMap.splice(index, 1);
       saveData(hashMap);
       render();
@@ -81,6 +82,10 @@ $last.on("click", function () {
     render();
   }
 });
-$("html").on("touchend", function () {
-  render();
+$("html").on("touchend", function (e) {
+  if (e.target === document.querySelector("body")) {
+    render();
+  } else {
+    return;
+  }
 });
