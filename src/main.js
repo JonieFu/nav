@@ -60,7 +60,7 @@ const render = function () {
 //   第二步渲染之前的数据
 render();
 // 添加点击事件应该先获取并渲染之前的数据;
-$last.on("click", function () {
+$last.on("click touchend", function () {
   let link = window.prompt("添加我的导航：");
   if (link) {
     if (link.indexOf("http") === 0 || link.indexOf("//") === 0) {
