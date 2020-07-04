@@ -40,14 +40,13 @@ const render = function () {
         </li>`);
     // 添加节点
     $last.before($li);
-    $("a").on("touchstart", function () {
+    $("a").on("touchstart", function (e) {
       startTime = +new Date();
       timer = setTimeout(function () {
         $(".del").css("display", "block");
       }, 700);
     });
-
-    $("a").on("touchend", function () {
+    $("a").on("touchend", function (e) {
       endTime = +new Date();
       clearTimeout(timer);
     });
@@ -83,30 +82,6 @@ $last.on("click", function () {
     render();
   }
 });
-$("html").on("keypress", function (e) {
-  let str = e.key;
-  hashMap.forEach(function (item, index) {
-    let url = item.url;
-    if (str === item.logo) {
-      window.open(url);
-    }
-  });
+$("html").on("click", function () {
+  render();
 });
-// function longPress() {
-//   timeOutEvent = 0;
-//   console.log("yeah");
-//   $(".del").css("visibility", "visible");
-// }
-
-// $(".site").on("touchstart", function (e) {
-//   console.log(e.target);
-
-//   // if (e.target === "") {
-//   // }
-//   // console.log("11111111111111111111");
-//   // timeOutEvent = setTimeout(function () {
-//   //   console.log("yeah");
-//   //   $(".del").css("visibility", "visible");
-//   // }, 1000);
-//   // e.preventDefault();
-// });
