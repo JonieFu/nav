@@ -40,11 +40,16 @@ const render = function () {
         </li>`);
     // 添加节点
     $last.before($li);
-    $("a").on("touchstart", function (e) {
-      timeOutEvent = setTimeout(function () {
+    $("a").on("touchstart", function () {
+      startTime = +new Date();
+      timer = setTimeout(function () {
         $(".del").css("display", "block");
-      }, 1000);
-      e.preventDefault();
+      }, 700);
+    });
+
+    $("a").on("touchend", function () {
+      endTime = +new Date();
+      clearTimeout(timer);
     });
     $(".site").on("click", ".del", function () {
       hashMap.splice(index, 1);
