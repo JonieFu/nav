@@ -42,8 +42,7 @@ const render = function () {
     $last.before($li);
     $("a").on("touchstart", function (e) {
       timeOutEvent = setTimeout(function () {
-        console.log("yeah");
-        $(".del").css("display", "none");
+        $(".del").css("display", "block");
       }, 1000);
       e.preventDefault();
     });
