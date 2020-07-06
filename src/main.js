@@ -76,6 +76,8 @@ $last.on("click", function () {
         .replace("https://", "")
         .replace("http://", "")
         .replace(/\/.*/, "");
+    } else if (link.indexOf("com") === -1) {
+      url = "//" + link + ".com";
     } else {
       url = "//" + link;
     }
